@@ -4,11 +4,11 @@ import {Navigate} from "react-router-dom";
 const LoginStatus = true;
 
 const PrivateRoute = (props) => {
-  const {children, ...others} = props;
+  const {children, ...other} = props;
   if(!LoginStatus) return <Navigate to="/" />
 
   return (
-    <Fragment {...others}>{children}</Fragment>
+    <Fragment {...other}>{children}</Fragment>
   )
 }
 

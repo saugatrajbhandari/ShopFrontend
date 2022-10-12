@@ -34,7 +34,7 @@ const Router = () => {
               element={
                 <Suspense fallback={<h1>Loading</h1>}>
                   <MergeLayoutRoute route={route}>
-                    <route.children />
+                    <route.component />
                   </MergeLayoutRoute>
                 </Suspense>
               }
