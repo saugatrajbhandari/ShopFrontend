@@ -8,7 +8,7 @@ const AppLayout = ({children}) => {
   return (
     <>
     {width > 1024 ? <Header /> : <MobileHeader />}
-    <div className="min-h-[100vh] max-w-[1290px] mx-auto pt-20 lg:pt-32 px-3 md:px-8">
+    <div className="min-h-[100vh] max-w-[1290px] mx-auto pt-10 px-3 md:px-8">
     {children}
     </div>
     <Footer />

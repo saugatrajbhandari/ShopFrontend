@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between bg-greyColor py-5 px-10">
       <div className="flex items-center">
-        <h1 className="font-semibold main-header text-white">PROSHOP</h1>
+        <Link to="/" className="font-semibold main-header text-white">PROSHOP</Link>
 
         <div className="ml-10">
           <input type="text" className="py-2" name="" id="" />
