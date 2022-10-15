@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
-import productListApi from "../../services/product/productListApi";
-import ProductCard from "./ProductCard";
-import cn from "classnames";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import ProductCard from "../../components/products/ProductCard";
+import cn from "classnames";
+import productListApi from "../../services/product/productListApi";
 
-const ProductList = () => {
+const Products = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const products = await productListApi();
+        const products = await productListApi({ limit: 25 });
         setProducts(products.results);
       } catch (error) {}
       setIsLoading(false);
@@ -22,10 +22,9 @@ const ProductList = () => {
   if (isLoading) return <h1>Loading...</h1>;
   return (
     <>
-      <div className="flex items-center justify-between">
-        <h1 className="main-header font-regular mb-4">Latest Product</h1>
-        <Link to="/products">view all</Link>
-      </div>
+      <h1 className="main-header font-regular mb-4 border-b-2">
+        Latest Product
+      </h1>
       <div className="mt-10   md:mt-0 md:grid grid-cols-3 lg:grid-cols-4 gap-5">
         {products.map((product, index) => {
           return (
@@ -44,4 +43,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default Products;
