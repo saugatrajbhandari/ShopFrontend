@@ -4,9 +4,9 @@ import PasswordInputField from "../../components/passwordInputField/PasswordInpu
 
 const Login = () => {
   return (
-    <div className="flex items-center justify-center h-[calc(100vh-145px)] md:h-[calc(100vh-132px)]">
+    <div className="flex items-center justify-center h-[calc(100vh-145px)] md:h-[calc(100vh-20pxs)] mt-20">
       <div
-        className="w-full max-w-[700px] rounded-md p-5 md:p-14"
+        className="w-full h-full max-w-[700px] rounded-md p-5 md:p-14"
         style={{ boxShadow: "0px 4px 30px rgba(0, 0, 0, 0.1)" }}
       >
         <h1 className="text-center text-[32px] font-semibold">Login</h1>
