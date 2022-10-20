@@ -69,4 +69,13 @@
   .sub-text{
     @apply text-[0.8rem];
   }
+  
+  .inputLabel {
+    @apply normal-header tracking-[-0.02rem] font-regular text-neutral-800;
+  }
+
+  .inputField {
+    @apply w-full px-2 py-3 mt-2 text-[16px] font-regular rounded-md outline-none border border-gray-200 active:border-primary hover:border-primary;
+  }
 }
+

@@ -4,14 +4,14 @@ const navigationMenus = [
   {
     id: "cart",
     name: "Cart",
-    path: "cart/",
+    path: "/cart",
     icon: ShoppingCart,
   },
 
   {
     id: "login",
     name: "Login",
-    path: "login",
+    path: "/login",
     icon: User,
   },
 ];

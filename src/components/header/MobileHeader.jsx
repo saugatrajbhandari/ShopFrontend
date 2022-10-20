@@ -7,7 +7,7 @@ const MobileHeader = () => {
   const [isDrawerOpened, setIsDrawerOpened] = useState(false);
   return (
     <>
-      <div className="fixed top-0  w-full mx-auto py-5 px-4 z-50 bg-greyColor text-white">
+      <div className="fixed top-0  w-full mx-auto py-5 px-4 z-50 bg-primary text-white">
         <div className="flex justify-between items-center">
           <Link to="/" className="font-semibold sub-header">
             PROSHOP

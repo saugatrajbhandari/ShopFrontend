@@ -1,8 +1,11 @@
 import { lazy } from "react";
-import Products from "../app/products/Products";
-import SingleProductDetail from "../app/singleProductDetail/SingleProductDetail";
 
 const Home = lazy(() => import("../app/home/Home"));
+const SingleProductDetail = lazy(() =>
+  import("../app/singleProductDetail/SingleProductDetail")
+);
+const Products = lazy(() => import("../app/products/Products"));
+const Login = lazy(() => import("../app/auth/Login"));
 
 const appRoutes = [
   {
@@ -31,6 +34,16 @@ const appRoutes = [
     path: "/products",
     exact: true,
     component: Products,
+    meta: {
+      appLayout: true,
+      privateRoute: false,
+    },
+  },
+  {
+    id: "login",
+    path: "/login",
+    exact: true,
+    component: Login,
     meta: {
       appLayout: true,
       privateRoute: false,

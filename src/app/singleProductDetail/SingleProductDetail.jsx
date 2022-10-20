@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
 import ProductDetailApi from "../../services/product/productDetailApi";
 import AboutProduct from "./aboutProduct/AboutProduct";
@@ -14,7 +15,9 @@ const SingleProductDetail = () => {
       try {
         const product = await ProductDetailApi({ id });
         setProduct(product);
-      } catch (error) {}
+      } catch (error) {
+        toast.error(error?.response?.data?.error || "Something went wrong");
+      }
       setIsLoading(false);
     };
 

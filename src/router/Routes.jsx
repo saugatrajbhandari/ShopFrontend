@@ -1,5 +1,6 @@
 import { Fragment, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ScrollToTop from "../utils/ScrollToTop";
 import AppLayout from "./AppLayout";
 import appRoutes from "./appRoutes";
 import PrivateRoute from "./PrivateRoute";
@@ -10,9 +11,7 @@ const MergeLayoutRoute = (props) => {
   const { children, route } = props;
 
   const AppLayoutWrapper = route.meta.appLayout ? AppLayout : Fragment;
-  const PrivateRouteWrapper = route.meta.privateRoute
-    ? PrivateRoute
-    : Fragment;
+  const PrivateRouteWrapper = route.meta.privateRoute ? PrivateRoute : Fragment;
 
   return (
     <AppLayoutWrapper>
@@ -24,6 +23,7 @@ const MergeLayoutRoute = (props) => {
 const Router = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         {mergedRoutes.map((route) => {
           return (

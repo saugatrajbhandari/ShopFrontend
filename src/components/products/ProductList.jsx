@@ -4,6 +4,7 @@ import ProductCard from "./ProductCard";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 import ProductCardSkeleton from "../skeleton/ProductCardSkeleton";
+import toast from "react-hot-toast";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -14,7 +15,10 @@ const ProductList = () => {
       try {
         const products = await productListApi();
         setProducts(products.results);
-      } catch (error) {}
+      } catch (error) {
+        toast.error(error?.response?.data?.error || "Something went wrong");
+        console.log(error);
+      }
       setIsLoading(false);
     };
     getProducts();

@@ -9,7 +9,7 @@ const AboutProduct = (props) => {
     <div className="md:flex">
       <div>
         <img
-          className="aspect-[1/1.43] max-w-[250px] object-cover rounded-r-md"
+          className="aspect-[1/1.43] max-w-[250px] object-cover rounded-md"
           src={product.image}
           alt={product.name}
         />
