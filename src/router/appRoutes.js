@@ -6,6 +6,7 @@ const SingleProductDetail = lazy(() =>
 );
 const Products = lazy(() => import("../app/products/Products"));
 const Login = lazy(() => import("../app/auth/Login"));
+const Register = lazy(() => import("../app/auth/Register"));
 
 const appRoutes = [
   {
@@ -44,6 +45,16 @@ const appRoutes = [
     path: "/login",
     exact: true,
     component: Login,
+    meta: {
+      appLayout: true,
+      privateRoute: false,
+    },
+  },
+  {
+    id: "register",
+    path: "/register",
+    exact: true,
+    component: Register,
     meta: {
       appLayout: true,
       privateRoute: false,

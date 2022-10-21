@@ -60,7 +60,7 @@ const ProductDetail = (props) => {
             <Link to={option.link} key={index}>
               <div
                 className={cn("", {
-                  "border-greyColor border-b-2 pb-2 -mb-2.5":
+                  "border-primary border-b-2 pb-2 -mb-2.5":
                     section === option.value,
                 })}
               >

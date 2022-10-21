@@ -77,5 +77,8 @@
   .inputField {
     @apply w-full px-2 py-3 mt-2 text-[16px] font-regular rounded-md outline-none border border-gray-200 active:border-primary hover:border-primary;
   }
+  .primaryButton {
+    @apply text-[16px] px-[22px] py-[12px] rounded-md font-medium bg-primary text-white;
+  }
 }
 
