@@ -1,8 +1,9 @@
+import React from "react";
 import { useState } from "react";
 import { Eye, EyeOff } from "react-feather";
 import cn from "classnames";
 
-const PasswordInputField = (props) => {
+const PasswordInputField = React.forwardRef((props, ref) => {
   const { className = "", iconSize, placeholder, ...others } = props;
   const [displayPassword, setDisplayPassword] = useState(false);
 
@@ -12,6 +13,7 @@ const PasswordInputField = (props) => {
         type={displayPassword ? "text" : "password"}
         className={cn("pr-[40px]", className)}
         placeholder={placeholder}
+        ref={ref}
         {...others}
       />
       <div className="absolute top-6 right-2">
@@ -31,6 +33,6 @@ const PasswordInputField = (props) => {
       </div>
     </div>
   );
-};
+});
 
 export default PasswordInputField;

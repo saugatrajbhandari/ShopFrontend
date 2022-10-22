@@ -16,6 +16,7 @@ const ProductList = () => {
       const products = await productListApi();
       setProducts(products.results);
     } catch (error) {
+      console.log(error);
       toast.error(error?.response?.data?.error || "Something went wrong");
     }
     setIsLoading(false);
