@@ -116,8 +116,6 @@ const Register = () => {
           <label className="inputLabel">
             Password<span className="text-primary"> *</span>
             <Controller
-              name="password"
-              control={control}
               render={({ field }) => (
                 <PasswordInputField
                   {...field}
@@ -126,6 +124,8 @@ const Register = () => {
                   placeholder="Enter your password"
                 />
               )}
+              name="password"
+              control={control}
             />
           </label>
           <p className="text-red mt-2">{errors.password?.message}</p>

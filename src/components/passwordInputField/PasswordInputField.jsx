@@ -4,7 +4,8 @@ import { Eye, EyeOff } from "react-feather";
 import cn from "classnames";
 
 const PasswordInputField = React.forwardRef((props, ref) => {
-  const { className = "", iconSize, placeholder, ...others } = props;
+  const { className, iconSize, placeholder, value, ...others } = props;
+
   const [displayPassword, setDisplayPassword] = useState(false);
 
   return (
